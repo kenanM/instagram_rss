@@ -3,8 +3,6 @@ This script turns someones Instagram page into an RSS feed.
 
 Further reading on the RSS spec: https://cyber.harvard.edu/rss/rss.html
 
-TODO Encoding Errors
-
 """
 import argparse
 import json
