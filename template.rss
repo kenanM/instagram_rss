@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>{{username}}'s posts on Instagram</title>
+  <link>http://www.w3schools.com</link>
+  <description>Instagram posts from {{username}}</description>
+  {% for item in items -%}
+  <item>
+    <guid>{{item.link}}</guid>
+    <title>{{item.title}}</title>
+    <link>{{item.link}}</link>
+    <pubDate>{{item.pub_date}}</pubDate>
+    <description>
+        <![CDATA[
+        <img src="{{item.thumbnail_src}}"></img>
+        {{item.caption}}
+        ]]>
+    </description>
+  </item>
+  {% endfor -%}
+</channel>
+</rss>
