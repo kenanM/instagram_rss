@@ -42,8 +42,8 @@ class FeedItem(object):
 
     @property
     def pub_date(self):
-        """ Generates a date formatted to RFC 2"""
-        return self.date.strftime('%a, %d %b %Y %H:%m:%S GMT')
+        """ Generates a date formatted to comply with RFC 822"""
+        return self.date.strftime('%a, %d %b %Y %H:%m:%S +0000')
 
 
 def generate_feed(username, out_dir):
