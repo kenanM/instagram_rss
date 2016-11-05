@@ -73,4 +73,7 @@ def generate_feed(username, out_dir):
 if __name__ == '__main__':
     args = parser.parse_args()
     for username in args.usernames:
-        generate_feed(username, args.out)
+        try:
+            generate_feed(username, args.out)
+        except Exception as e:
+            print e
